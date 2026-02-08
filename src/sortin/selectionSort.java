@@ -1,4 +1,4 @@
-package src.sortin;
+package sortin;
 
 public class selectionSort {
     
