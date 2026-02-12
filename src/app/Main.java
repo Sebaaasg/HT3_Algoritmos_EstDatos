@@ -2,7 +2,6 @@ package app;
 
 import sortin.*;
 import utils.crearArchivo;
-import utils.lectorArchivo;
 
 public class Main {
     
@@ -15,7 +14,6 @@ public class Main {
         
         // se leen los datos del archivo
         int[] datosOriginales = generador.leerArchivo();
-        lectorArchivo Orden = new lectorArchivo();
 
         java.util.Arrays.sort(datosOriginales); // para hacer la prueba con datos ordenados
         System.out.println("Datos cargados. Total: " + datosOriginales.length);
@@ -45,7 +43,7 @@ public class Main {
             int[] datosGnome = datosOriginales.clone(); // .clone(), crea y devuelve una copia del objeto
             gnome.ordenar(datosGnome);
         }
-        //Orden.verificarOrden(datosGnome);
+        // generador.verificarOrden(datosGnome);
 
         // Selection Sort
         selectionSort selection = new selectionSort();
@@ -54,7 +52,7 @@ public class Main {
             int[] datosSelection = datosOriginales.clone();
             selection.ordenar(datosSelection);
         }
-        // Orden.verificarOrden(datosSelection);
+        // generador.verificarOrden(datosSelection);
 
 
         // Quick Sort
@@ -64,7 +62,7 @@ public class Main {
             int[] datosQuick = datosOriginales.clone();
             quick.ordenar(datosQuick);
         }
-        // Orden.verificarOrden(datosQuick);
+        // generador.verificarOrden(datosQuick);
 
         // Radix Sort
         radixsort radix = new radixsort();
@@ -73,7 +71,7 @@ public class Main {
             int[] datosRadix = datosOriginales.clone();
             radix.ordenar(datosRadix);
         }
-        // Orden.verificarOrden(datosRadix);
+        // generador.verificarOrden(datosRadix);
 
         // Merge Sort
         mergeSort merge = new mergeSort();
@@ -82,7 +80,7 @@ public class Main {
             int[] datosMerge = datosOriginales.clone();
             merge.ordenar(datosMerge);
         }
-        // Orden.verificarOrden(datosMerge);
+        // generador.verificarOrden(datosMerge);
         
     }
 
